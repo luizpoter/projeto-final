@@ -1,0 +1,58 @@
+{
+    "ricos":[
+      {
+        "id": 1, 
+        "nome":"T'Challa", 
+        "img":"assets/T'Challa.jpeg", 
+        "fortuna":"90 trilhões"
+      },
+      {
+        "id": 2, 
+        "nome":"Smaug", 
+        "img":"assets/smaug.jpeg", 
+        "fortuna":"62 bilhões"
+      },
+      {
+        "id": 3, 
+        "nome":"Pão-Duro MacMônei", 
+        "img":"assets/paoduro.jpeg", 
+        "fortuna":"51.9 bilhões"
+      },
+      {
+        "id": 4, 
+        "nome":"Carlisle Cullen", 
+        "img":"assets/cullen.jpeg", 
+        "fortuna":"36.3 bilhões"
+      },
+      {
+        "id": 5, 
+        "nome":"Jed Clampett", 
+        "img":"assets/jed.jpeg", 
+        "fortuna":"9.8 bilhões"
+      },
+      {
+        "id": 6, 
+        "nome":"Tony Stark", 
+        "img":"assets/stark.jpeg", 
+        "fortuna":"9.3 bilhões"
+      }, 
+      {
+        "id": 7, 
+        "nome":"Riquinho Rico", 
+        "img":"assets/reed.jpeg", 
+        "fortuna":"8.9 bilhões"
+      },
+      {
+        "id": 8, 
+        "nome":"Charles Foster Kane", 
+        "img":"assets/charles.jpeg", 
+        "fortuna":"8.3 bilhões"
+      },
+      {
+        "id": 9, 
+        "nome":"Bruce Wayne", 
+        "img":"assets/bruce.jpeg", 
+        "fortuna":"6.9 bilhões"
+      }
+    ]     
+  }

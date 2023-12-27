@@ -39,3 +39,15 @@
     color: rgb(61, 1, 1);
     text-align: end;
 }
+
+#btnCreate {
+    background-color: green;
+}
+
+#btnUpdate {
+    background-color: yellow;
+}
+
+#btnDelete {
+    background-color: red;
+}

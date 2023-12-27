@@ -1,4 +1,4 @@
-import { getAllRicos, createRicos, deleteRicos, updateRicos } from "./service.js";
+import { getAllRicos, createRicos, deleteRicos, updateRicos, adicionarRicos } from "./service.js";
 
 window.onload = () => {
     loadRicos();
@@ -13,6 +13,9 @@ const loadRicos = () => {
 
     const dataContainer = document.getElementById('data-container');
     getAllRicos().then(resp => {
+        // Sort the response array in descending order based on ID
+        resp.sort((a, b) => b.id - a.id);
+
         resp.forEach((ricos) => {
             const ricosElement = document.createElement('div');
             ricosElement.innerHTML =
@@ -36,14 +39,26 @@ const loadRicos = () => {
             };
             await createRicos(ricos);
         });
-        document.getElementById('btnDelete').addEventListener('click', async(event) => {
+        document.getElementById('btnAdicionar').addEventListener('click', async(event) => {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            const nome = document.querySelector('.nome').value;
+            const img = document.querySelector('.img').value;
+            const fortuna = document.querySelector('.fortuna').value;
+
             const ricos = {
-                nome: "Tywin Lannister",
-                img: "assets/tywin.jpeg",
-                fortuna: "1,8 bilhão",
-                id: 10
+                nome,
+                img,
+                fortuna,
             };
-            deleteRicos(ricos);
+            await adicionarRicos(ricos);
+        });
+        document.getElementById('btnDelete').addEventListener('click', async(event) => {
+            // Delete items by iterating in descending order
+            for (let i = 0; i < resp.length; i++) {
+                const ricos = resp[i];
+                await deleteRicos(ricos);
+            }
         });
 
         document.getElementById('btnUpdate').addEventListener('click', async(event) => {

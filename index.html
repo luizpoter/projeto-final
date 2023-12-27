@@ -11,12 +11,22 @@
 
 <body class="fundo">
     <div class="container">
-        <aside>
-            <p>update.</p>
-        </aside>
+
         <button id="btnCreate" onclick="event">Create</button>
         <button id="btnUpdate" onclick="event">Update</button>
         <button id="btnDelete" onclick="event">Delete</button>
+        <aside>
+            <form action="text" id="ricosForm">
+                <h1>Formulario</h1>
+                <label for="nome">nome</label>
+                <input type="text" class="nome">
+                <label for="img">imagem</label>
+                <input type="text" class="img">
+                <label for="fortuna">fortuna</label>
+                <input type="text" class="fortuna">
+                <button type="button" id="btnAdicionar" onclick="event">Adicionar</button>
+            </form>
+        </aside>
         <div class="containerRicos" id="data-container"></div>
         <script type="module" src='./js/main.js'></script>
     </div>

@@ -30,6 +30,20 @@ export const createRicos = async(ricos) => {
 
 };
 
+export const adicionarRicos = async(ricos) => {
+    fetch(URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(ricos)
+        })
+        .then(response => response.json())
+        .then(data => console.log('sucesso: ', data))
+        .catch((error) => console.log('Erro: ', error));
+
+};
+
 export const deleteRicos = async(ricos) => {
     fetch(URL + `/${ricos.id}`, { method: 'DELETE' })
         .then(response => response.json())

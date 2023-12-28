@@ -14,7 +14,7 @@ const loadRicos = () => {
     const dataContainer = document.getElementById('data-container');
     getAllRicos().then(resp => {
         // Sort the response array in descending order based on ID
-        resp.sort((a, b) => b.id - a.id);
+        resp.sort((a, b) => a.id - b.id);
 
         resp.forEach((ricos) => {
             const ricosElement = document.createElement('div');
@@ -57,7 +57,7 @@ const loadRicos = () => {
             // Delete items by iterating in descending order
             for (let i = 0; i < resp.length; i++) {
                 const ricos = resp[i];
-                await deleteRicos(ricos);
+                await deleteRicos(ricos[i]);
             }
         });
 

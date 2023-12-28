@@ -53,12 +53,22 @@ const loadRicos = () => {
             };
             await adicionarRicos(ricos);
         });
-        document.getElementById('btnDelete').addEventListener('click', async(event) => {
+
+        document.getElementById('btnDelete').addEventListener('click', (ricos) => {
             // Delete items by iterating in descending order
-            for (let i = 0; i < resp.length; i++) {
-                const ricos = resp[i];
-                await deleteRicos(ricos[i]);
-            }
+
+            //     export const deleteRicos = async(ricos) => {
+            //         fetch(URL + `/${ricos.id}`, { method: 'DELETE' })
+            //             .then(response => response.json())
+            //             .then(data => console.log('Success:', data))
+            //             .catch(error => console.error('Error:', error));
+            //     };
+            deleteRicos(1)
+
+            //     for (let i = 0; i < resp.length; i++) {
+            //         const ricos = resp[i];
+            //         await deleteRicos(ricos.id);
+            //     }
         });
 
         document.getElementById('btnUpdate').addEventListener('click', async(event) => {
@@ -66,7 +76,7 @@ const loadRicos = () => {
                 nome: "Tywin Lannister",
                 img: "assets/tywin.jpeg",
                 fortuna: "1,8 bilhão",
-                id: 10
+                id: 1
             };
             updateRicos(ricos);
         });

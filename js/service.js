@@ -124,7 +124,7 @@ export const adicionarRicos = async(ricos) => {
 
 export const deleteRicos = async(ricosId) => {
     try {
-        const response = await fetch(`${URL}/${ricosId}`, { method: 'DELETE' });
+        const response = await fetch(`${URL}/${ricos.Id}`, { method: 'DELETE' });
 
         // Handling errors in the response
         handleErrors(response);

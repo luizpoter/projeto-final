@@ -12,9 +12,7 @@
 <body class="fundo">
     <div class="container">
 
-        <button id="btnCreate" onclick="event">Create</button>
-        <button id="btnUpdate" onclick="event">Update</button>
-        <button id="btnDelete" onclick="event">Delete</button>
+
         <aside>
             <form action="text" id="ricosForm">
                 <h1>Formulario</h1>
@@ -27,7 +25,11 @@
                 <button type="button" id="btnAdicionar" onclick="event">Adicionar</button>
             </form>
         </aside>
-        <div class="containerRicos" id="data-container"></div>
+
+        <div class="containerRicos" id="data-container">
+            <button id="btnCreate" onclick="event">Create</button>
+            <button id="btnUpdate" onclick="event">Update</button>
+            <button id="btnDelete">Delete</button> </div>
         <script type="module" src='./js/main.js'></script>
     </div>
 </body>
